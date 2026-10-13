@@ -1,0 +1,6 @@
+browser-2way.txt: rows=10, admissible_frames=144, 2-way=81/81, deterministic=PASS
+browser-3way.txt: rows=20, admissible_frames=144, 3-way=248/248, deterministic=PASS
+transfer-nc.txt: rows=16, admissible_frames=180, 2-way=87/87, deterministic=PASS, happy=0, error_choices_0_1_2_3=[0, 4, 6, 6]
+transfer.txt: rows=15, admissible_frames=34, 2-way=66/66, deterministic=PASS, happy=0, error_choices_0_1_2_3=[0, 14, 1, 0]
+transfer-neg.txt: rows=20, admissible_frames=33, 2-way=65/65, deterministic=PASS, happy=4, error_choices_0_1_2_3=[4, 16, 0, 0]
+All verification checks passed. HTTP calls were not executed.
