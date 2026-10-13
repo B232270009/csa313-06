@@ -1,0 +1,6 @@
+# Numeric representatives and setup are defined in README.md.
+From: Valid, Frozen, Missing
+To: Valid, Missing, SameAsFrom
+Amount: Normal, Zero, Negative, OverBalance, OverLimit
+Currency: Same, Different
+Remaining: Fresh, NearLimit

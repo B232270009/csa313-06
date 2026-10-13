@@ -1,0 +1,16 @@
+From: Valid, Frozen, Missing
+To: Valid, Missing, SameAsFrom
+Amount: Normal, Zero, Negative, OverBalance, OverLimit
+Currency: Same, Different
+Remaining: Fresh, NearLimit
+
+# SINGLE representative for a missing source.
+IF [From] = "Missing" THEN [To] = "Valid" AND [Amount] = "Normal" AND [Currency] = "Same" AND [Remaining] = "Fresh";
+# Isolate Frozen except one deliberate precedence frame.
+IF [From] = "Frozen" THEN [Amount] = "Normal" AND [To] IN {"Valid", "Missing"};
+IF [From] = "Frozen" AND [To] = "Missing" THEN [Currency] = "Same" AND [Remaining] = "Fresh";
+# Target errors require a normal amount and an existing source.
+IF [To] <> "Valid" THEN [Amount] = "Normal" AND [From] <> "Missing";
+IF [To] = "SameAsFrom" THEN [From] = "Valid";
+# Amount errors are evaluated on two valid distinct accounts.
+IF [Amount] <> "Normal" THEN [From] = "Valid" AND [To] = "Valid";

@@ -1,0 +1,9 @@
+# Negative choices isolate one error category per generated row.
+From: Valid, ~Frozen, ~Missing
+To: Valid, ~Missing, ~SameAsFrom
+Amount: Normal, ~Zero, ~Negative, ~OverBalance, ~OverLimit
+Currency: Same, Different
+Remaining: Fresh, NearLimit
+
+# Negative marking does not imply SINGLE; retain this policy explicitly.
+IF [From] = "Missing" THEN [To] = "Valid" AND [Amount] = "Normal" AND [Currency] = "Same" AND [Remaining] = "Fresh";

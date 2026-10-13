@@ -1,0 +1,17 @@
+From	To	Amount	Currency	Remaining
+Valid	Missing	OverLimit	Same	Fresh
+Missing	Valid	Negative	Different	NearLimit
+Frozen	SameAsFrom	OverBalance	Different	Fresh
+Missing	Missing	OverBalance	Same	NearLimit
+Frozen	SameAsFrom	Negative	Same	NearLimit
+Valid	Valid	Zero	Same	Fresh
+Valid	SameAsFrom	Zero	Different	NearLimit
+Valid	Missing	Negative	Different	Fresh
+Valid	Valid	OverBalance	Same	Fresh
+Missing	SameAsFrom	Zero	Same	Fresh
+Frozen	Valid	Normal	Same	NearLimit
+Valid	Missing	Normal	Different	Fresh
+Missing	SameAsFrom	Normal	Different	NearLimit
+Frozen	Missing	Zero	Same	Fresh
+Missing	SameAsFrom	OverLimit	Different	NearLimit
+Frozen	Valid	OverLimit	Different	Fresh
